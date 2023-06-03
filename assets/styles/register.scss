@@ -1,0 +1,53 @@
+body {
+    background-image: url("../images/bg-01.jpg");
+    background-size: cover;
+    padding: 50px;
+
+    .registration-form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 30px auto 0px auto;
+        font-weight: 600;
+
+
+        .checkbox-terms,
+        .checkbox {
+            margin: 20px 0px;
+
+            div {
+                display: flex;
+                align-items: center;
+
+                label {
+                    font-size: 22px;
+                    padding: 12px;
+
+                }
+            }
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+
+            &:hover {
+                color: greenyellow;
+            }
+        }
+
+        button {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            background-color: black;
+            color: whitesmoke;
+            width: 100%;
+
+            &:hover {
+                background-color: greenyellow;
+            }
+        }
+    }
+}
