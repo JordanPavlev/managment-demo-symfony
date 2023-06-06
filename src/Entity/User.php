@@ -56,6 +56,23 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return (string) $this->email;
     }
 
+     /**
+     * @ORM\Column(type="boolean")
+     */
+    private $rememberMe;
+
+    public function getRememberMe(): ?bool
+    {
+        return $this->rememberMe;
+    }
+
+    public function setRememberMe(bool $rememberMe): self
+    {
+        $this->rememberMe = $rememberMe;
+
+        return $this;
+    }
+
     /**
      * @see UserInterface
      */

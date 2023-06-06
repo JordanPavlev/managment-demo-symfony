@@ -25,9 +25,18 @@ class RegistrationFormType extends AbstractType
                     'class' => 'mt-2 form-control'
                 ]
             ])
+            ->add('remember_me', CheckboxType::class, [
+                'required' => false,
+                'label' => 'Remember Me',
+                'attr' => [
+                    'class' => 'form-check-input'
+                ],
+
+            ])
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
-                'label' => 'I agree with the Website agreements',
+                'label' => 'I agree with the <a href="/agreements">Website agreements</a>',
+                'label_html' => true,
                 'attr' => [
                     'class' => 'form-check-input'
                 ],
@@ -37,7 +46,20 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
-            
+
+            ->add('agreeTerms', CheckboxType::class, [
+                'mapped' => false,
+                'label' => 'I agree with the <a href="/agreements">Website agreements</a>',
+                'label_html' => true,
+                'attr' => [
+                    'class' => 'form-check-input'
+                ],
+                'constraints' => [
+                    new IsTrue([
+                        'message' => 'You should agree to our terms.',
+                    ]),
+                ],
+            ])
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
@@ -47,7 +69,7 @@ class RegistrationFormType extends AbstractType
                     'autocomplete' => 'new-password',
                     'placeholder' => '',
                     'class' => 'mt-2 form-control'
-            ],
+                ],
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Please enter a password',
