@@ -15,8 +15,9 @@
     {{ form_row(registrationForm.email) }}
     {{ form_row(registrationForm.plainPassword, { label: 'Password' }) }}
     <div class="checkbox-terms">{{ form_row(registrationForm.agreeTerms) }}</div>
-    <div class="checkbox"> {{ form_end(registrationForm) }}</div>
+    <div class="checkbox"> </div>
     <button type="submit" class="btn">Register</button>
+    {{ form_end(registrationForm) }}
     <label >Already have an account ? <a href="/login">Login to your account</a></label>
    
     
