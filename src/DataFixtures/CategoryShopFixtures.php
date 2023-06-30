@@ -11,31 +11,31 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
             $categories = [
                 1 => [
                     'name' => 'Foods',
-                    'slug' => 'All foods'
+                    'slug' => 'foods'
                 ],
                 2 => [
                     'name' => 'Drinks',
-                    'slug' => 'All drinks'
+                    'slug' => 'drinks'
                 ],
                 3 => [
                     'name' => 'Babies and kids',
-                    'slug' => 'Baby foods and accessories'
+                    'slug' => 'kids'
                 ],
                 4 => [
                     'name' => 'Fruits and Vegetables',
-                    'slug' => 'Fresh and dried'
+                    'slug' => 'freshfoods'
                 ],
                 5 => [
                     'name' => 'Pets',
-                    'slug' => 'Foods and accessories'
+                    'slug' => 'pets'
                 ],
                 6 => [
                     'name' => 'Accessories',
-                    'slug' => 'All accessories'
+                    'slug' => 'accessories'
                 ],
                 7 => [
                     'name' => 'Home and garden',
-                    'slug' => 'Outdoor and lights'
+                    'slug' => 'outdoor'
                 ]
             ];
 
